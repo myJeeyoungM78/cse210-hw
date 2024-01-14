@@ -36,23 +36,6 @@ class Program
         {
             System.Console.WriteLine(i);
         }
-
-
-    
-
-
-        // if (int SeriesNum = 0; number.Count; SeriesNum++)
-        //     {
-        //         numbers.Add(Seriesnum);
-        //     }
-
-        //     int sum = 0;
-        //     {
-        //         sum += SeriesNum;
-        //     }
-        //     {
-        //         Console.WriteLine($"The sum is: {sum}")
-        //     }
     }
 
 }
