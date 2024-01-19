@@ -23,7 +23,15 @@ class Program
         myResume. _jobs.Add(job1);
         myResume. _jobs.Add(job2);
 
-        myResume.Display();
+        myResume.DisplayResume();
+
+        if (myResume._jobs.Count > 0)
+        {
+            string firstJobTitle = myResume._jobs[0]._jobTitle;
+            Console.WriteLine($"First job title: {firstJobTitle}");
+        }
+
+        
  
     
     }
@@ -48,7 +56,14 @@ class Program
         public string _name;
         public List<Job> _jobs = new List<Job>();
 
-        public void Display()
+        // public Resume()
+        // {
+        //     _name = name;
+            
+        // }
+
+        // public Resume();
+        public void DisplayResume()
         {
             Console.WriteLine($"Name: {_name}");
             Console.WriteLine("Jobs: ");
@@ -59,5 +74,10 @@ class Program
             }
         }
 
+        // public override bool Equals(object obj)
+        // {
+        //     return obj is Resume resume &&
+        //            _name == resume._name;
+        // }
     }
 }
