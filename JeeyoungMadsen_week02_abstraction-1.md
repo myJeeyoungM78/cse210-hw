@@ -13,7 +13,7 @@ and manitainability.
 
 For example:
 
-(public void SaveJournalToFile()
+public void SaveJournalToFile()
     {
         if (journalEntries.Count == 0)
         {
@@ -31,7 +31,7 @@ For example:
             }
         }
     }
-)
+
 Abstraction is exemplified through the Journal class, which provids a clean interface 
 for high-level operations like writing, displaying, and saving entries.
 
