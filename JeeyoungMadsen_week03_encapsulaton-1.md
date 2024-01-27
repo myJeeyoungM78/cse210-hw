@@ -14,8 +14,8 @@ Encapsulation - Articulate
 2. A class be responsible for the details of a particular task.
     Preventing other of the program from accessing those details.
 
-3. * If something is broken, any code. that has access might be to blame.
-    * if something needs to chang, any code that has access might need to change.
+3. * If something is broken, any code that has access might be to blame.
+    * if something needs to change, any code that has access might need to change.
 
 4. 
 public class Fraction
