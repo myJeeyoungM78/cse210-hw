@@ -4,6 +4,8 @@ using System.Data;
 using System.Text;
 using System.IO;
 using System.Diagnostics;
+using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 
 class Program
 {
@@ -12,10 +14,12 @@ class Program
         // Console.WriteLine("Hello, Welcome to scripture memorizer!");
         // Console.WriteLine("Press enter to continue or type 'quit' to finish");
 
-        List<Scripture> scriptures = new List<Scripture>();
         // string quote = "Proverbs 3:5-6 Trust in the Lord with all thine bheart; and lean not unto thine cown dunderstanding. In all thy ways aacknowledge him, and he shall bdirect thy cpaths.";
-
-        string filename = "C:\\Users\\jeeyo\\Documents\\Scripture.txt";
+        
+        List<Scripture> scriptures = new List<Scripture>();
+        // string filename = "C:\\Users\\jeeyo\\OneDrive\\Documents\\Scripture.txt";
+        // string [] lines = System.IO.File.ReadAllLines(filename);
+        string filename = "scripture.txt";
         string [] lines = System.IO.File.ReadAllLines(filename);
 
         foreach (string line in lines)
@@ -38,30 +42,15 @@ class Program
             Scripture s1 = new Scripture(sr, text);
 
             scriptures.Add(s1);
-        }
-
-        // string text = "Thus saith the Lord.";
-
-        // ScriptureReference sr1 = new ScriptureReference("Proverbs", 3, 5-6);
-
-        // Scripture s1 = new Scripture(sr1, text);
-
-        // string input = "";
-
-        // while(!s1.IsCompletelyHidden() && !input.Equals("quit"))
-        // {
-            // System.Console.WriteLine(s1.GetDisplayText());
-            // input = Console.ReadLine();
-            // Console.Clear();
-            // s1.HideRandomWords(3);
-        // }
-
         
+            // Scripture s = scriptures[0];
+            // s.PlayGame();
+        }
 
         Scripture s = scriptures[0];
         s.PlayGame();
-
     }
+}
 
 class Scripture
 {
@@ -239,8 +228,4 @@ class Word
             return _text;
         }
     }
-}
-
-
-
 }
